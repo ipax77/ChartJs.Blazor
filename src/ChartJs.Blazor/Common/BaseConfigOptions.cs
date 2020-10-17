@@ -17,6 +17,12 @@ namespace ChartJs.Blazor.Common
         public OptionsTitle Title { get; set; }
 
         /// <summary>
+        /// Layout for the padding to add inside the chart
+        /// <para>Link: https://www.chartjs.org/docs/latest/configuration/layout.html </para>
+        /// </summary>
+        public Layout Layout { get; set; }
+
+        /// <summary>
         /// Gets or sets a value indicating whether the chart canvas should be resized when its container is.
         /// <para>See important note: https://www.chartjs.org/docs/latest/general/responsive.html#important-note </para>
         /// </summary>
