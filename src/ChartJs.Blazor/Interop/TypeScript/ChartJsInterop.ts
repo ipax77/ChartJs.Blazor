@@ -56,7 +56,7 @@ class ChartJsInterop {
         // This will add new options and update existing ones. Nothing is deleted.
         // Calling extend instead of merge avoids the unnecessary deep copy as
         // config.options is a brand new object (deserialized by blazor).
-        Chart.helpers.extend(myChart.config.options, config.options);
+        // Chart.helpers.extend(myChart.config.options, config.options);
 
         myChart.update();
         return true;
@@ -86,7 +86,7 @@ class ChartJsInterop {
 
                 // Merge everything, including the data-array reference.
                 // As with the labels, deep copying(with helper.merge) is simply a waste here.
-                Chart.helpers.extend(oldDatasets[i], sameDatasetInNewConfig);
+                // Chart.helpers.extend(oldDatasets[i], sameDatasetInNewConfig);
             }
         }
 
@@ -145,8 +145,8 @@ class ChartJsInterop {
 
     private wireUpOptionsOnClick(config: ChartConfiguration) {
         let getDefaultFunc = type => {
-            let defaults = Chart.defaults[type] || Chart.defaults.global;
-            return defaults?.onClick || Chart.defaults.global.onClick;
+            let defaults = Chart.defaults[type] || Chart.defaults;
+            return defaults?.onClick || Chart.defaults.onClick;
         };
 
         if (!config.options)
@@ -157,8 +157,8 @@ class ChartJsInterop {
 
     private wireUpOptionsOnHover(config: ChartConfiguration) {
         let getDefaultFunc = type => {
-            let defaults = Chart.defaults[type] || Chart.defaults.global;
-            return defaults?.onHover || Chart.defaults.global.onHover;
+            let defaults = Chart.defaults[type] || Chart.defaults;
+            return defaults?.onHover || Chart.defaults.onHover;
         };
 
         if (!config.options)
@@ -169,8 +169,8 @@ class ChartJsInterop {
 
     private wireUpLegendOnClick(config: ChartConfiguration) {
         let getDefaultHandler = type => {
-            let chartDefaults = Chart.defaults[type] || Chart.defaults.global;
-            return chartDefaults?.legend?.onClick || Chart.defaults.global.legend.onClick;
+            let chartDefaults = Chart.defaults[type] || Chart.defaults;
+            return chartDefaults?.legend?.onClick || Chart.defaults.legend.onClick;
         };
 
         if (!config.options?.legend)
@@ -181,8 +181,8 @@ class ChartJsInterop {
 
     private wireUpLegendOnHover(config: ChartConfiguration) {
         let getDefaultFunc = type => {
-            let chartDefaults = Chart.defaults[type] || Chart.defaults.global;
-            return chartDefaults?.legend?.onHover || Chart.defaults.global.legend.onHover;
+            let chartDefaults = Chart.defaults[type] || Chart.defaults;
+            return chartDefaults?.legend?.onHover || Chart.defaults.legend.onHover;
         };
 
         if (!config.options?.legend)
@@ -193,8 +193,8 @@ class ChartJsInterop {
 
     private wireUpLegendItemFilter(config: ChartConfiguration) {
         let getDefaultFunc = type => {
-            let chartDefaults = Chart.defaults[type] || Chart.defaults.global;
-            return chartDefaults?.legend?.labels?.filter || Chart.defaults.global.legend.labels.filter;
+            let chartDefaults = Chart.defaults[type] || Chart.defaults;
+            return chartDefaults?.legend?.labels?.filter || Chart.defaults.legend.labels.filter;
         };
 
         if (!config.options?.legend?.labels)
@@ -205,8 +205,8 @@ class ChartJsInterop {
 
     private wireUpGenerateLabels(config: ChartConfiguration) {
         let getDefaultFunc = type => {
-            let chartDefaults = Chart.defaults[type] || Chart.defaults.global;
-            return chartDefaults?.legend?.labels?.generateLabels || Chart.defaults.global.legend.labels.generateLabels;
+            let chartDefaults = Chart.defaults[type] || Chart.defaults;
+            return chartDefaults?.legend?.labels?.generateLabels || Chart.defaults.legend.labels.generateLabels;
         };
 
         if (!config.options?.legend?.labels)

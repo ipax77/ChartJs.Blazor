@@ -15,9 +15,9 @@
 //                 Alexandros Dorodoulis <https://github.com/alexdor>
 //                 Manuel Heidrich <https://github.com/mahnuh>
 //                 Conrad Holtzhausen <https://github.com/Conrad777>
-//                 Adrián Caballero <https://github.com/adripanico>
+//                 Adriï¿½n Caballero <https://github.com/adripanico>
 //                 wertzui <https://github.com/wertzui>
-//                 Martin Trobäck <https://github.com/lekoaf>
+//                 Martin Trobï¿½ck <https://github.com/lekoaf>
 //                 Elian Cordoba <https://github.com/ElianCordoba>
 //                 Takuya Uehara <https://github.com/indigolain>
 //                 Ricardo Mello <https://github.com/ricardo-mello>
